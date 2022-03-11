@@ -1,7 +1,6 @@
-const identicalElement = function funcIdenticalElement(newArray) {
-  const element = newArray[0];
+const identicalElement = function (newArray) { //eslint-disable-line
   for (let i = 1; i < newArray.length; i += 1) {
-    if (element !== newArray[i]) {
+    if (newArray[i - 1] !== newArray[i]) {
       return false;
     }
   }

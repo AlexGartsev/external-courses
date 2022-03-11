@@ -1,4 +1,4 @@
-const counterNumber = function funcCounterNumber(newArray) {
+const counterNumber = function (newArray) { //eslint-disable-line
   let counterZero = 0;
   let counterEven = 0;
   let counterUneven = 0;

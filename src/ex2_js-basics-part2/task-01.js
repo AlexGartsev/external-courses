@@ -1,4 +1,4 @@
-const determiner = function funcDeterminer(inputData) {
+const determiner = function (inputData) { //eslint-disable-line
   if (typeof inputData === 'number' && isNaN(inputData)) {
     return undefined;
   }

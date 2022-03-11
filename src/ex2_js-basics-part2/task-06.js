@@ -1,4 +1,4 @@
-const simpleNumber = function funcSimpleNumber(inputNumber) {
+const simpleNumber = function (inputNumber) { //eslint-disable-line
   if (inputNumber === 1 || inputNumber === 0) {
     return 'Не причисляется ни к простым, ни к составным числам';
   }
