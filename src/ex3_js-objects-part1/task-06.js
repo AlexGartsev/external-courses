@@ -1,10 +1,9 @@
 const getProperty = (object, propertyPath) => {
-  const propertyArray = propertyPath.split('.');
+  const arr = propertyPath.split('.');
   let currentProp = object;
-  for (let i = 0; i < propertyArray.length; i += 1) {
-    const prop = propertyArray[i];
-    if (currentProp.hasOwnProperty(prop)) {
-      currentProp = currentProp[prop];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (currentProp.hasOwnProperty(arr[i])) {
+      currentProp = currentProp[arr[i]];
     } else {
       currentProp = undefined;
       break;

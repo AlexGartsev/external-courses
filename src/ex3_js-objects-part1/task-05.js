@@ -1,7 +1,3 @@
-const cloneObject = (obj) => {
-  const cloneObj = Object.assign({}, obj); //eslint-disable-line
-
-  return cloneObj;
-};
+const cloneObject = (obj) => Object.assign({}, obj); //eslint-disable-line
 
 module.exports = cloneObject;
