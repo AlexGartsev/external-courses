@@ -1,0 +1,51 @@
+.vintage {
+    background: url(https://png.pngtree.com/thumb_back/fw800/background/20210501/pngtree-simple-paper-texture-vintage-background-design-concept-image_695834.jpg);
+}
+
+.vintage p {
+    color:#323536;
+    font-size: 110%;
+    font-family: "Century Gothic";
+    font-weight: 600;
+    font-style: italic;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+img {
+    padding: 10px 100px;
+    width:  400px;
+    height: 200px;
+}
+
+.individ {
+    width:  300px;
+    margin-left: 400px;
+    background-color: rgb(17, 15, 134);
+    color:white;
+}
+
+#test {
+    list-style-type: square;
+    font-size: 18px;
+}
+
+a:hover {
+    border-bottom: 2px solid;
+}
+
+a:active {
+    background:red;
+}
+
+a:visited {
+    color:green;
+}
+
+.godzilla {
+    color:white;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
