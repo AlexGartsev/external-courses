@@ -1,0 +1,45 @@
+body {
+    margin: 40px;
+}
+
+button {
+    display: inline-block;
+    background: linear-gradient(#d7dadd 50%, #cccfd3 50%);
+    width: 300px;
+    height: 80px;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 8px #c1bfbf;
+    border-color: rgb(197, 194, 194);
+    color: #323131d4;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+    position:absolute;
+    left: 12px;
+    top:12px;
+    z-index: 1;
+}
+div {
+    display:block;
+    padding: 20px;
+    background-color: white;
+    width:284px;
+    height:64px;
+    border: solid;
+    border-color: #686060;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.star:before {
+    content: "\2605";
+    color: #86898b;
+    font-size: 100%;
+}
+.star::after {
+    content: "\2605";
+    color: #86898b;
+    font-size: 100%;
+}
