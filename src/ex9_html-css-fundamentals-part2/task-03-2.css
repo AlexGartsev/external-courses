@@ -1,0 +1,9 @@
+.header {
+    font-variant:small-caps;
+}
+.table {
+    font-family: sans-serif;
+}
+.name {
+    text-transform: capitalize;
+}

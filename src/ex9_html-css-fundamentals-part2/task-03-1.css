@@ -1,0 +1,21 @@
+body {
+    padding: 30px;
+}
+td {
+    padding: 20px;
+}
+th {
+    background: #e6ebeb;
+}
+.table {
+    border-spacing: 3px;
+}
+tr:nth-child(odd) {
+    background-color: #e6ebeb;
+}
+tr:nth-child(even) {
+    background-color: #eefbfb;
+}
+tr:hover td {
+    background: #c4cbcb;
+}

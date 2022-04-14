@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Опроса</title>
+</head>
+<body>
+    <form action="http://httpbin.org/post" enctype="multipart/form-data" method="post">
+        <fieldset>
+            <legend>Personal data</legend>
+            <p><label> Surname <input type="text" name="Surname"></label></p>
+            <p><label> First Name <input type="text" name="First Name"></label></p>
+            <p><label>Missle Name <input type="text" name="Middle Name"></label></p>
+            <p><label>You are <input type="radio" name="Пол" value="man"> male <input type="radio" name="Пол" value="woman"> female</label></p>
+            <p><label>Age <input type="number" min="18" max="101" name="age"></label></p>
+            <p><label>Country of Residence <select>
+                <option value=""></option>
+                <option value="Australia">Australia</option>
+                <option value="Belarus">Belarus</option>
+                <option value="China">China</option>
+                <option value="Finland">Finland</option>
+                <option value="Germany">Germany</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Russia">Russia</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="United States of America">United States of America</option>
+            </select></label></p>
+            <p><label>City<input type="checkbox" name="City" value="Ryazan"> Ryazan <input type="checkbox" name="City" value="Moscow"> Moscow </label></p>
+            <p><label>Photography <input type="file" name="Photography" accept="image/*" alt="Photo"></label></p>
+            <hr>
+            <p><label>Title <select size="8">
+                <optgroup label="Technologies">
+                    <option value="Web Master">Web Master</option>
+                    <option value="Database Administrator">Database Administrator</option>
+                    <option value="Computer-aided design">Computer-aided design</option>
+                </optgroup>
+                <optgroup label="Finance">
+                    <option value="Economic Planning">Economic Planning</option>
+                    <option value="Management accounting">Management accounting</option>
+                    <option value="Budgeting and planning">Budgeting and planning</option>
+                </optgroup>
+            </select></label></p>
+            <p><label>Salary<input type="range" name="Salary"></label></p>
+            <textarea placeholder="Tell us about yourself..." cols="50" rows="10" name="dossier"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <p><label>Site <input type="url" name="Site"> </label></p>
+            <p><label>Email <input type="email" name="Email"></label></p>
+            <p><label>Phone <input type="text" name="Phone"></label></p>
+        </fieldset>
+        <p><label>Password <input type="password" name="password" required></label></p>
+         <input type="submit"> <input type="reset">
+
+
+    </form>
+</body>
+</html>
