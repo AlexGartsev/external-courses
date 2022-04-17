@@ -1,0 +1,62 @@
+form {
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+      "title title"
+      "price specific"
+      "description description";
+    grid-template-columns: 200px 2fr;
+    grid-template-rows: repeat(3, 62px);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+}
+#header {
+    grid-area: title;
+}
+#left center {
+    grid-area: price;
+}
+#right center {
+    grid-area: specific;
+}
+#footer {
+    grid-area: description;
+}
+div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+input {
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    outline: none; 
+}
+  
+label {
+    padding-left: 1rem;
+    color: #bdbdbd;
+    transform: translateY(2.8rem);
+    transform-origin: left top;
+    cursor: text;
+    transition: all 0.3s;
+}
+#price {
+    border-right: 0.1rem solid #bdbdbd;
+    border-bottom: 0.1rem solid #bdbdbd;
+}
+#title {
+    border-bottom: 0.1rem solid #bdbdbd;
+}
+#specific {
+    border-bottom: 0.1rem solid #bdbdbd;
+}
+ 
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    padding-right: 1rem;
+    color: #1526c2;
+    font-size: 16px;
+    font-weight: bolder;
+    transform: translateY(1.4rem) scale(0.8);
+}
