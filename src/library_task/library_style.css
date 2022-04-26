@@ -1,0 +1,132 @@
+@font-face {
+    font-family: Proxima Nova;
+    src: url(assets/fonts/ProximaNovaRegular.otf);
+}
+@font-face {
+    font-family: FontAwesome;
+    src: url(assets/fonts/FontAwesome.otf);
+}
+body {
+    width: 1320px;
+    height: 900px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    width: 1320px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #2f364a;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.help_center {
+    display: flex;
+    flex-direction: row;
+    width: 198px;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 21px;
+}
+.header_text {
+    font-size: 13px;
+    line-height: 26px;
+    color: #78829d;
+    font-family: "Proxima Nova";
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 26px;
+    color: #78829d;
+    font-family: "Proxima Nova";
+}
+.user_place{
+    width: 157px;
+    height: 45px;
+    background-color: #15a4fa;
+    order: -1;
+    display: flex;
+    border-top-right-radius: inherit;
+}
+.user {
+    width: 157px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 12px;
+    padding-right: 21px;
+}
+.user_text {
+    color: #ffffff;
+}
+#user_menu::before {
+    font-size: 13px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "FontAwesome";
+    content: '\f13a';
+}
+.photo_back {
+    width: 28px;
+    height: 28px;
+    border-radius: 16px;
+    background-color: #6eb5eb;
+    border: 2px solid #eef1f7;
+}
+.profile_photo {
+    clip-path: circle(50%);
+}
+#circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(25,32,46,0.7490196078431373);;
+}
+footer {
+    width: 1320px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #181e2c;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.question {
+    width: 55px;
+    height: 100%;
+    background-color: #1f2637;
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.settings {
+    width: 55px;
+    height: 100%;
+    background-color: #15a4fa;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.question::before {
+    font-family: 'FontAwesome';
+    content: '\f059';
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+}
+.settings::before {
+    font-family: 'FontAwesome';
+    content: '\f013';
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+}
