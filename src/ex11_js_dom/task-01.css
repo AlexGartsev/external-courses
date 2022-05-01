@@ -1,7 +1,7 @@
-#slider {
+.slider {
     position: relative;
     max-width: 650px;
-    margin: 100px auto auto;
+    margin: 100px auto;
     height: 400px;
 }
 .previous, .next {
@@ -16,7 +16,8 @@
 .next {
     right: 0;
 }
-.next:hover, .previous:hover {
+.next:hover, 
+.previous:hover {
     background-color: rgba(11, 228, 243, 0.3);
     border-radius: 10%;
 }

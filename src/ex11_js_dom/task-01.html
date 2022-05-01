@@ -6,40 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo-Slider</title>
     <link rel="stylesheet" href="task-01.css">
+    <script defer src="task-01.js"></script>
 </head>
-<script>
-    const slider = {
-  slides: ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg',],
-  frame: 0,
-  set: function (image) {
-    document.getElementById('slider').style.backgroundImage = "url(asset/"+image+")";
-  },
-  init: function () {
-    this.set(this.slides[this.frame]);
-  },
-  previous: function () {
-    this.frame--;
-    if (this.frame < 0) { 
-        this.frame = this.slides.length - 1;
-    }
-    this.set(this.slides[this.frame]);
-  },
-  next: function () {
-    this.frame++;
-    if (this.frame == this.slides.length) {
-        this.frame = 0;
-    }
-    this.set(this.slides[this.frame]);
-  },
-};
-window.onload = function() {
-	slider.init();
-};
-</script>
 <body>
-    <div id="slider">
-        <a class="previous" onclick="slider.previous()" tabindex="1">&#10094</a>
-        <a class="next" onclick="slider.next()" tabindex="0">&#10095</a> 
-    </div>
+    <div class='slider' id="slider">
+        <a class="previous" onclick="sliderPhoto.previous()" tabindex="1">&#10094;</a>
+        <a class="next" onclick="sliderPhoto.next()" tabindex="0">&#10095;</a> 
+    </div> 
 </body>
 </html>
