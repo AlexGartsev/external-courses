@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>My library</title>
   <link rel="stylesheet" href="library_style.css">
 </head>
+
 <body>
   <header>
     <ul class="help_center">
@@ -15,18 +17,163 @@
       <li><a href="#" class="header_text">Our support</a></li>
     </ul>
     <div class="user_place">
-    <ul class="user">
-      <li class="photo_back"><img class="profile_photo" src="https://sun9-66.userapi.com/impf/c626626/v626626937/4cb5d/Pb5gwjwcCSg.jpg?size=604x604&quality=96&sign=92bd9473e9f994fbc3622a5ee23f72e7&type=album" alt="cat" width="28"></li>
-      <li class="header_text user_text">John Doe</li>
-      <li id="user_menu"></li>
-    </ul>
+      <ul class="user">
+        <li class="photo_back"><img class="profile_photo"
+            src="https://sun9-66.userapi.com/impf/c626626/v626626937/4cb5d/Pb5gwjwcCSg.jpg?size=604x604&quality=96&sign=92bd9473e9f994fbc3622a5ee23f72e7&type=album"
+            alt="cat" width="28"></li>
+        <li class="header_text user_text">John Doe</li>
+        <li id="user_menu"></li>
+      </ul>
     </div>
   </header>
   <main>
+    <aside>
+      <div class="add_a_book_panel">
+        <button type="button" class="add_a_book"> ADD A BOOK </button>
+      </div>
+      <div class="divider">
+        <div class="divider_top"></div>
+        <div class="divider_center"></div>
+        <div class="divider_bottom"></div>
+      </div>
+      <ul class="navigation">
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-book"></i> Now Reading</a></li>
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-globe"></i>Browse</a></li>
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-shopping"></i>Buy Books</a></li>
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-star"></i>Favourite Books</a></li>
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-th-list"></i>Wishlist</a></li>
+        <li class="navigation_elem"><a href="#" class="menu_text"><i class="fa fa-history"></i>History</a></li>
+      </ul>
+      <div class="divider">
+        <div class="divider_top"></div>
+        <div class="divider_center"></div>
+        <div class="divider_bottom"></div>
+      </div>
+      <ul class="personal_categories">
+        <li class="list_elem">
+          <div class="circle" id="red_circle"></div>
+          <div class="categories_elem"><a href="#" class="menu_text">Must Readed Titles</a></div>
+        </li>
+        <li class="list_elem">
+          <div class="circle" id="yellow_circle"></div>
+          <div class="categories_elem"><a href="#" class="menu_text">Best Of List</a></div>
+        </li>
+        <li class="list_elem">
+          <div class="circle" id="blue_circle"></div>
+          <div class="categories_elem"><a href="#" class="menu_text">Classic Novels</a></div>
+        </li>
+        <li class="list_elem">
+          <div class="circle" id="purple_circle"></div>
+          <div class="categories_elem"><a href="#" class="menu_text">Non Fiction</a></div>
+        </li>
+      </ul>
+      <div class="divider">
+        <div class="divider_top"></div>
+        <div class="divider_center"></div>
+        <div class="divider_bottom"></div>
+      </div>
+      <div class="history_list">
+        <div class="history_top">
+          <div class="history_mail">
+            <div class="clock"></div>
+            <p class="history_text">You added Fight Club by Chuck Palahniuk to your Must Read Titles.</p>
+          </div>
+          <p class="history_time">24 minutes ago</p>
+        </div>
+        <div class="history_bottom">
+          <div class="history_mail">
+            <div class="clock"></div>
+            <p class="history_text">You added The Trial by Franz Kafka to your Must Read Titles.</p>
+          </div>
+          <p class="history_time">48 minutes ago</p>
+        </div>
+      </div>
+    </aside>
+    <div>
+      <div class="line_heading"> <i id="browse_books">Browse Available Books</i></div>
+      <div class="line_heading_bottom"></div>
+      <div class="line_filter_top"></div>
+      <div class="line_filter">
+        <ul class="filter_book">
+          <li class="filter_text">All Books</li>
+          <li class="filter_text">Most Recent</li>
+          <li class="filter_text">Most Popular</li>
+          <li class="filter_text">Free Books</li>
+        </ul>
+        <form class="search">
+          <input type="text" placeholder="Enter Keywords">
+          <button type="submit"></button>
+        </form>
+      </div>
+      <div class="line_filter_bottom"></div>
+      <div class="books">
+        <div class="book" id="book1">
+          <div class="background_book"></div>
+          <div class="name_book">The Bat</div>
+          <div class="author_book">Jo Nesbo</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i></div>
+        </div>
+        <div class="book" id="book2">
+          <div class="background_book"></div>
+          <div class="name_book">The Redbreast</div>
+          <div class="author_book">Jo Nesbo</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
+        </div>
+        <div class="book" id="book3">
+          <div class="background_book"></div>
+          <div class="name_book">American Gods</div>
+          <div class="author_book">Neil Gaiman</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
+        </div>
+        <div class="book" id="book4">
+          <div class="background_book"></div>
+          <div class="name_book">Port Of Shadows</div>
+          <div class="author_book">Glen Cook</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i><i class="star-o-book"></i></div>
+        </div>
+        <div class="book" id="book5">
+          <div class="background_book"></div>
+          <div class="name_book">The Snowman</div>
+          <div class="author_book">Jo Nesbo</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
+        </div>
+        <div class="book" id="book6">
+          <div class="background_book"></div>
+          <div class="name_book">The Black Company</div>
+          <div class="author_book">Glen Cook</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
+        </div>
+        <div class="book" id="book7">
+          <div class="background_book"></div>
+          <div class="name_book">Dead Souls</div>
+          <div class="author_book">Nikolai Gogol</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
+        </div>
+        <div class="book" id="book8">
+          <div class="background_book"></div>
+          <div class="name_book">Viy</div>
+          <div class="author_book">Nikolai Gogol</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
+        </div>
+        <div class="book" id="book9">
+          <div class="background_book"></div>
+          <div class="name_book">Anansi Boys</div>
+          <div class="author_book">Neil Gaiman</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i></div>
+        </div>
+        <div class="book" id="book10">
+          <div class="background_book"></div>
+          <div class="name_book">The Books Of The South</div>
+          <div class="author_book">Glen Cook</div>
+          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="question"></div>
     <div class="settings"></div>
   </footer>
 </body>
+
 </html>
