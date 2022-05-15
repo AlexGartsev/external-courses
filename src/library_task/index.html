@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My library</title>
   <link rel="stylesheet" href="library_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="core.js"></script>
+  <script src="BookModel.js"></script>
+  <script src="BookView.js"></script>
+  <script src="DomService.js"></script>
+  <script src="FBook.js"></script>
+  <script src="FPersonalRate.js"></script>
 </head>
 
 <body>
@@ -101,74 +110,88 @@
           <li class="filter_text">Free Books</li>
         </ul>
         <form class="search">
-          <input type="text" placeholder="Enter Keywords">
+          <input class="search-input" type="text" placeholder="Enter Keywords">
           <button type="submit"></button>
         </form>
       </div>
       <div class="line_filter_bottom"></div>
-      <div class="books">
-        <div class="book" id="book1">
-          <div class="background_book"></div>
-          <div class="name_book">The Bat</div>
-          <div class="author_book">Jo Nesbo</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i></div>
+
+      <div class="book-overview template-book hide">
+        <div class="tag-adding-area">
+            <div class="book-picture">
+                <img src="" alt="oh...">
+            </div>
+            <div class="book-model">
+                <span class="book-name"></span>
+            </div>
+            <div class="book-author"></div>
         </div>
-        <div class="book" id="book2">
-          <div class="background_book"></div>
-          <div class="name_book">The Redbreast</div>
-          <div class="author_book">Jo Nesbo</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
+        <div class="book-rating">
+            <div class="stars">
+                <a class="star"></a>
+                <a class="star"></a>
+                <a class="star"></a>
+                <a class="star"></a>
+                <a class="star"></a>
+            </div>
+            <div class="average-rating">
+            </div>
         </div>
-        <div class="book" id="book3">
-          <div class="background_book"></div>
-          <div class="name_book">American Gods</div>
-          <div class="author_book">Neil Gaiman</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
-        </div>
-        <div class="book" id="book4">
-          <div class="background_book"></div>
-          <div class="name_book">Port Of Shadows</div>
-          <div class="author_book">Glen Cook</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i><i class="star-o-book"></i></div>
-        </div>
-        <div class="book" id="book5">
-          <div class="background_book"></div>
-          <div class="name_book">The Snowman</div>
-          <div class="author_book">Jo Nesbo</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
-        </div>
-        <div class="book" id="book6">
-          <div class="background_book"></div>
-          <div class="name_book">The Black Company</div>
-          <div class="author_book">Glen Cook</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
-        </div>
-        <div class="book" id="book7">
-          <div class="background_book"></div>
-          <div class="name_book">Dead Souls</div>
-          <div class="author_book">Nikolai Gogol</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
-        </div>
-        <div class="book" id="book8">
-          <div class="background_book"></div>
-          <div class="name_book">Viy</div>
-          <div class="author_book">Nikolai Gogol</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i></div>
-        </div>
-        <div class="book" id="book9">
-          <div class="background_book"></div>
-          <div class="name_book">Anansi Boys</div>
-          <div class="author_book">Neil Gaiman</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-half-book"></i></div>
-        </div>
-        <div class="book" id="book10">
-          <div class="background_book"></div>
-          <div class="name_book">The Books Of The South</div>
-          <div class="author_book">Glen Cook</div>
-          <div class="rating_book"><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-book"></i><i class="star-o-book"></i></div>
-        </div>
-      </div>
     </div>
+    <div class="books">
+    </div>
+    </div>
+    </div>
+    <div class="new-book-modal hide">
+      <div class="modal-backdrop">
+      </div>
+      <div class="new-book-modal-content">
+          <header class="modal-header">
+              <div class="modal-title">
+                  New book
+              </div>
+              <div class="modal-header-button new-book-modal-close">
+                  
+              </div>
+          </header>
+          <form class="new-book-form" action="#">
+              <div class="modal-body" data-modal="content">
+                  <div class="modal-window">
+                      <div class="modal-form">
+                          <input class="modal-input-form new-book-name"
+                                 type="text"
+                                 placeholder="Enter Name Book" required>
+                          <input class="modal-input-form new-book-author" type="text"
+                                 placeholder="Enter Author" required>
+                          <label class="modal-button modal-choose-book-image-button">
+                              <input name="modal-choose-file"
+                                     class="new-book-image"
+                                     hidden type="file">
+                              <div class="nav-button-title">
+                                  CHOOSE BOOK IMAGE
+                              </div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="modal-preview">
+                      <img src="" alt="oh...">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button class="modal-button modal-submit">
+                      <div class="nav-button-title">
+                          CREATE
+                      </div>
+                  </button>
+                  <div class="modal-button new-book-modal-close">
+                      <div class="nav-button-title">
+                          CANCEL
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
   </main>
   <footer>
     <div class="question"></div>
